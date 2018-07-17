@@ -1,5 +1,9 @@
 var i;
-for (i = 1; i<= 1000; i++) {
+var limit = 1000;
+if (process.argv.length > 2) {
+    limit = process.argv[2];
+} 
+for (i = 1; i<= limit; i++) {
     var output = "";
     if (i%3 == 0) {
         output = output.concat("Fizz");
@@ -36,3 +40,4 @@ for (i = 1; i<= 1000; i++) {
     console.log(output)
 
 }
+
